@@ -1,0 +1,54 @@
+.questaoContainer {
+  margin: 1.5rem auto 1rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  border: 1px solid #dfe5ee;
+  border-radius: 4px;
+  padding: 1rem 2rem;
+
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: fadein 0.2s forwards;
+}
+.questaoContainer > header {
+  color: #905cff;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 2rem;
+  font-weight: 500;
+  background: url("/icons/hexagonoGray.svg") no-repeat center;
+  background-size: contain;
+}
+.questaoContainer > img {
+  margin-bottom: 1.5rem;
+}
+.alternativasContainer {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #dfe5ee;
+}
+.alternativasContainer > label {
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: #905cff;
+  display: flex;
+  align-items: baseline;
+  cursor: pointer;
+  transition: .4s ;
+}
+.alternativasContainer > label:hover{
+  color: #dfe5ee;
+}
+.alternativasContainer > label > input {
+  margin-left: 0.25rem;
+  cursor: pointer;
+  height: 1.75rem;
+  width: 1.75rem;
+}
+@keyframes fadein {
+  to {
+    transform: initial;
+    opacity: initial;
+  }
+}

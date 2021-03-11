@@ -1,0 +1,63 @@
+.containerTotal {
+  max-width: 1200px;
+  margin: auto;
+}
+.voltarButton {
+  background: white;
+  color: #BBBBBB;
+  border: 1px solid #BBBBBB;
+  border-radius: 3px;
+  outline: none;
+  font-size: 1.5rem;
+  padding: 0.2rem .75rem;
+  cursor: pointer;
+  transition: .2s;
+}
+.voltarButton:hover{
+    color: white;
+    background: #905cff;
+    border: 1px solid white;
+}
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.faculdade{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center center;
+}
+.faculdade>img{
+  height: 10vw;
+}
+.faculdade>div>img{
+  width: 3rem;
+  margin-right: 1rem;
+  transform: translateY(+10%);
+}
+.faculdade>div>span{
+  font-size: 3.25rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.faculdade>div>p{
+  font-size: 2rem;
+  font-weight: 200;
+  color: #bbbbbb;
+}
+.anos{
+  display: flex;
+  margin-top: 10rem;
+  justify-content: space-around;
+}
+.anos>div{
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #905cff;
+  cursor: pointer;
+  padding: 2rem .5rem;
+  background: url('/icons/hexagonoGrayThick.svg') no-repeat center;
+   /* background-size: contain;  */
+   background-size: 75%; 
+}

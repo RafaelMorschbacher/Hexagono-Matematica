@@ -1,0 +1,31 @@
+.navContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #905CFF;
+    color: white;
+    padding: .5rem 2rem;
+    margin-bottom: 1.5rem;
+}
+.logo{
+    display: flex;
+}
+.logo img{
+     width: 2.75rem;
+     margin-right: 1rem;
+}
+
+.navContainer>a>h2{
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+.navContainer>div{
+    font-weight: 500;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navContainer>div>a{
+    margin: 0 5px;
+}

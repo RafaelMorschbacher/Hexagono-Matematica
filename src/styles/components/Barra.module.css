@@ -1,0 +1,26 @@
+.containerBarrinha{
+width: fit-content;
+margin: 2rem;
+}
+.containerBarrinha>p{
+text-align: center;
+margin-bottom: .5rem;
+color: #4d4d4d;
+}
+.barrinhaTotal {
+  height: 1rem;
+  min-width: 250px;
+  width: 20vw;
+  border-radius: 2rem;
+  background: #dfe5ee;
+  margin: 0 1.5rem;
+  position: relative;
+}
+.barrinhaTotal > .barrinhaProgresso {
+  height: 100%;
+  border-radius: 2rem;
+}
+.barrinhaTotal > span {
+  transform: translateX(-50%);
+  position: absolute;
+}

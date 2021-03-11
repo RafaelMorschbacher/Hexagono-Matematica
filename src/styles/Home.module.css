@@ -1,0 +1,54 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem auto 0;
+  max-width: 1200px;
+  padding-bottom: 3rem;
+}
+.Adverstisement {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-content: center;
+  justify-content: center;
+}
+.Adverstisement > img {
+  flex: 1;
+  max-width: 300px;
+  transform: translate(50%,-2.75rem)
+}
+
+.Adverstisement > div > p {
+  font-weight: 600;
+  font-size: 2.7rem;
+  line-height: 1.5;
+}
+.Adverstisement > div > p:nth-child(2) {
+  color: #905cff;
+}
+.secondAd > img {
+   transform: none
+}
+.secondAd > div {
+  margin-left: 10rem; 
+}
+.startButton {
+  margin: auto;
+  font-size: 2.2rem;
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  border: 1px solid #905cff;
+
+  color: white;
+  background: #905cff;
+  transition: 0.2s;
+}
+.startButton:hover {
+  cursor: pointer;
+
+  background: white;
+  color: #905cff;
+  border: 1px solid #905cff;
+  transition: 0.2s;
+}

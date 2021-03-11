@@ -1,0 +1,34 @@
+.resultadoGeral {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.resultadoGeral>p{
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+.barraTotal {
+    height: 1rem;
+    width: 40vw;
+    min-width: 300px;
+    border-radius: 2rem;
+    background: #dfe5ee;
+    margin: 0 1.5rem 2rem;
+    position: relative;
+
+  }
+  .barraTotal>.barraProgresso {
+    height: 100%;
+    border-radius: 2rem;
+  }
+  .barraTotal>span{
+      transform: translateX(-50%);
+      position: absolute;
+      font-weight: 600;
+  }
+  .texto{
+    width: 70vw;
+    text-align: center;
+    color: #bbbbbb;
+  }

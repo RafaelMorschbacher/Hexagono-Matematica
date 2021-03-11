@@ -1,0 +1,70 @@
+.containerTotal {
+  max-width: 1200px;
+  margin: auto;
+}
+.voltarButton {
+  background: white;
+  color: #BBBBBB;
+  border: 1px solid #BBBBBB;
+  border-radius: 3px;
+  outline: none;
+  font-size: 1.5rem;
+  padding: 0.2rem .75rem;
+  cursor: pointer;
+  transition: .2s;
+}
+.voltarButton:hover{
+    color: white;
+    background: #FF505A;
+    border: 1px solid white;
+}
+.universidadeInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.universidadeInfo > img {
+  height: 5vh;
+  transform: translateY(-10%);
+  margin-right: 5px;
+  padding-right: 5px;
+  border-right: 1px solid #bbbbbb;
+}
+.universidadeInfo > h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.navegarButtons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.navegarButtons > button {
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.2rem;
+  border: 1px solid #905cff;
+  outline: none;
+  margin: 0 5px;
+
+  color: white;
+  background: #905cff;
+  transition: 0.2s;
+}
+.navegarButtons > button:hover{
+    cursor: pointer;
+    background: white;
+    color: #905cff;
+    border: 1px solid #905cff;
+}
+.navegarButtons > .ultimaQuestaoButton{
+    background: #28a309;
+    border: 1px solid #28a309;
+}
+.navegarButtons > .ultimaQuestaoButton:hover{
+    cursor: pointer;
+    background: white;
+    color: #28a309;
+    border: 1px solid #28a309;
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "ufmg",
+    "nome": "UFMG",
+    "anos": ["2017", "2018", "2019"],
+    "descricao": "Localizada na Região Sudeste, a mais industrializada do Brasil, a UFMG, instituição pública de ensino superior gratuito, é a mais antiga universidade do estado de Minas Gerais. Sua fundação ocorreu em 7 de setembro de 1927 com o nome Universidade de Minas Gerais (UMG). Quase um século após, a instituição é liderança regional e nacional em ensino, extensão,  cultura, pesquisa científica e geração de patentes, em diversas áreas do conhecimento. "
+  },
+  {
+    "id": "ufrgs",
+    "nome": "UFRGS",
+    "anos": ["2018", "2019", "2020"],
+    "descricao": "A Universidade Federal do Rio Grande do Sul, com sede em Porto Alegre , capital do Estado do Rio Grande do Sul, é uma instituição centenária, reconhecida nacional e internacionalmente. Ministra cursos em todas as áreas do conhecimento e em todos os níveis, desde o Ensino Fundamental até a Pós-Graduação."
+  },
+  {
+    "id": "fuvest",
+    "nome": "FUVEST",
+    "anos": ["2018", "2019", "2020"],
+    "descricao": "A FUVEST é a principal maneira de ingresso nas maiores universidades do estado de São Paulo"
+  }
+]
