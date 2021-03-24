@@ -1,0 +1,102 @@
+.title{
+    width: fit-content;
+    margin: auto;
+    padding: 1.5rem;
+    font-weight: 600;
+    font-size: 2rem;
+    background: url('/icons/hexagonoGrayThick.svg') no-repeat center;
+    /* background-size: contain;  */
+    background-size: 35%; 
+}
+.containerGeral{
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    justify-items: center;
+    align-items: center;
+    margin: 1.2rem 0 3rem;
+}
+.containerGeral>img{
+    width: 100%;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding-bottom: 1.5rem;
+    background: #F6F6F6;
+    border-radius: .5rem;
+    box-shadow: 0 0 60px rgba(0, 0 ,0 ,0.05);
+}
+.form>label{
+    color: #2F2E41;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12%;
+    font-weight: 600;
+}
+.form>label>input{
+    width: 100%;
+    border: none;
+    margin-top: .5rem;
+    height: 2rem;
+    box-shadow: 0 0 60px rgba(0, 0 ,0 ,0.05);
+    
+}
+.criarButton{
+    background: #905CFF;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: .4rem 3.5rem;
+    margin-top: 10%;
+    border: 1px solid #905CFF;
+    cursor: pointer;
+    transition: .2s;
+}
+.criarButton:hover{
+    background: white;
+    color: #905CFF;
+    border: 1px solid #905CFF;
+}
+.erro{
+    margin-top: 1rem;
+    padding: .5rem 2rem;
+    border-radius: 4px;
+    background-color: #FF505A;
+    color: white;
+    
+}
+.textoEntrar{
+    text-align: center;
+    margin-top: 1rem;
+}
+.textoEntrar>p{
+    color: #3F3D56;
+    font-weight: 600;
+}
+.entrarClick{
+    color: #905CFF;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width: 1115px){
+    .containerGeral>img{
+        margin-right: 70%;
+    }
+}
+@media (max-width: 625px){
+    .containerGeral{
+        display: flex;
+        flex-direction: column;
+    }
+    .containerGeral>img{
+        margin-right: 0;
+        margin-top: 10vh;
+        width: 45vw;
+    }
+}

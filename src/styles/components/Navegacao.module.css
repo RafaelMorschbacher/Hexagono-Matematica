@@ -1,0 +1,35 @@
+.navegacaoContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.questaoItem{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #905CFF;
+    width: 2.5rem;
+    text-align: center;
+    border: 3px solid #DFE5EE;
+    border-radius: 5px;
+    margin: .5rem;
+    cursor: pointer;
+    transition: .2s;
+}
+.questaoItem:hover{
+    background-color: #905CFF;
+    color: white;
+    border: 3px solid #905CFF;
+}
+.feito{
+    color: #DFE5EE;
+}
+.feito:hover{
+    background-color: #DFE5EE;
+    border: 3px solid #DFE5EE ;
+}
+.atual{
+    color: white;
+    background-color: #905CFF;
+    border: 3px solid #905CFF ;
+}

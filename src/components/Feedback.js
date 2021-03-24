@@ -2,13 +2,12 @@ import React from "react";
 import styles from "../styles/components/Feedback.module.css";
 import Barra from "./Barra";
 import BarraBig from "./BarraBig";
-import Composicao from "./Composicao";
+import ComposicaoMobile from "./ComposicaoMobile";
+import Estudar from "./Estudar";
+const ComposicaoGrafico = React.lazy(()=> import('./ComposicaoGrafico'))
 
 const Feedback = ({ acertos, questoesTotal }) => {
-  const porcentGeral = Math.floor(
-    (acertos.length / questoesTotal.length) * 100
-  );
-
+  
   const AssuntosSet = new Set();
   const arraysAssuntos = questoesTotal.map((questao) => questao.assuntos); // Fazendo um array de arrays de assunto
   const assuntosComRepeticao = arraysAssuntos.reduce((acc, it) =>
@@ -36,11 +35,14 @@ const Feedback = ({ acertos, questoesTotal }) => {
         <span>Seus Resultados</span>
         <p>Parabéns por chegar até aqui!</p>
       </header>
-      <BarraBig porcentagem={porcentGeral} />
+      <BarraBig porcentagem={Math.floor((acertos.length/questoesTotal.length)*100)} />
       <div className={styles.resultadosEspecificos}>
-        {assuntos.map((assunto)=> <Barra materia={assunto} porcentagem={resultados[assunto]}/>)}
+        {assuntos.map((assunto)=> <Barra key={assunto} materia={assunto} porcentagem={resultados[assunto]}/>)}
       </div>
-      <Composicao questoes={questoesTotal} assuntos={assuntos}/> 
+      {window.screen.width>=600? <React.Suspense fallback={<></>}>
+         <ComposicaoGrafico assuntos={assuntos} questoesTotal={questoesTotal}/>
+      </React.Suspense> : <ComposicaoMobile assuntos={assuntos} questoesTotal={questoesTotal}/>}
+      <Estudar assuntos={assuntos} resultados={resultados}/>
     </div>
   );
 };

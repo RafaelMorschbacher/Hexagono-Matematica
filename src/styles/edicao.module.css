@@ -37,7 +37,7 @@
 .navegarButtons {
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin: 1rem auto;
 }
 .navegarButtons > button {
   font-size: 1.2rem;
@@ -67,4 +67,10 @@
     background: white;
     color: #28a309;
     border: 1px solid #28a309;
+}
+
+@media (max-width: 1200px){
+  .containerTotal{
+    padding: 0 7.5%;
+  }
 }

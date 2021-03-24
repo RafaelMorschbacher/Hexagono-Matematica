@@ -4,60 +4,96 @@
 }
 .voltarButton {
   background: white;
-  color: #BBBBBB;
-  border: 1px solid #BBBBBB;
+  color: #bbbbbb;
+  border: 1px solid #bbbbbb;
   border-radius: 3px;
   outline: none;
   font-size: 1.5rem;
-  padding: 0.2rem .75rem;
+  padding: 0.2rem 0.75rem;
   cursor: pointer;
-  transition: .2s;
+  transition: 0.2s;
 }
-.voltarButton:hover{
-    color: white;
-    background: #905cff;
-    border: 1px solid white;
+.voltarButton:hover {
+  color: white;
+  background: #905cff;
+  border: 1px solid white;
 }
-.mainContainer{
+.mainContainer {
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
 }
-.faculdade{
+.faculdade {
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center center;
 }
-.faculdade>img{
+.faculdade > img {
   height: 10vw;
 }
-.faculdade>div>img{
+.faculdade > div > img {
   width: 3rem;
   margin-right: 1rem;
   transform: translateY(+10%);
 }
-.faculdade>div>span{
+.faculdade > div > span {
   font-size: 3.25rem;
   font-weight: 600;
   line-height: 1.5;
 }
-.faculdade>div>p{
+.faculdade > div > p {
   font-size: 2rem;
   font-weight: 200;
   color: #bbbbbb;
 }
-.anos{
+.anos {
   display: flex;
   margin-top: 10rem;
   justify-content: space-around;
 }
-.anos>div{
+.anos > div {
   font-size: 3.5rem;
   font-weight: 700;
   color: #905cff;
   cursor: pointer;
-  padding: 2rem .5rem;
-  background: url('/icons/hexagonoGrayThick.svg') no-repeat center;
-   /* background-size: contain;  */
-   background-size: 75%; 
+  padding: 2rem 0.5rem;
+  background: url("/icons/hexagonoGrayThick.svg") no-repeat center;
+  /* background-size: contain;  */
+  background-size: 75%;
+  transition: 0.2s;
+}
+.anos > div:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 1250px) {
+  .voltarButton {
+    margin-left: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .faculdade > div {
+    margin-left: 7.5vw;
+  }
+  .faculdade > img {
+    height: 20vw;
+  }
+}
+@media (max-width: 425px) {
+  .faculdade > div > span {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 375px) {
+  .faculdade > div > span {
+    font-size: 3.25rem;
+  }
+}
+@media (max-width: 375px){
+  .faculdade > div > span{
+    font-size: 2.5rem;
+  }
+  .faculdade > div> p{
+    font-size: 1.75rem;
+  }
 }

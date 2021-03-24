@@ -1,20 +1,48 @@
 import React from "react";
 import Header from "../../../components/Header.js";
 import styles from "../../../styles/prova.module.css";
-import { useRouter } from "next/router";
-import universidades from "../../../../universidades.json";
+import firebase from "../../../others/firebase";
 import Link from "next/link";
-import Head from 'next/head'
+import Head from "next/head";
 
-const index = () => {
-  const { prova } = useRouter().query;
-  const selecionada = universidades.filter((uni) => uni.id === prova)[0];
+export const getStaticPaths = async () => {
+  const response = await firebase
+    .firestore()
+    .collection("info")
+    .doc("disponiveis")
+    .collection("provas")
+    .get();
+  const arrayDocs = response.docs.map((doc) => doc.data());
+  const paths = arrayDocs.map((doc) => {
+    return { params: { prova: doc.id } };
+  });
 
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps = async ({ params }) => {
+  const response = await firebase
+    .firestore()
+    .collection("info")
+    .doc("disponiveis")
+    .collection("provas")
+    .doc(params.prova)
+    .get();
+  const selecionada = response.data();
+  return {
+    props: { selecionada },
+  };
+};
+
+const index = ({ selecionada }) => {
   return (
     <>
-    <Head>
-      <title>Hexagono | {prova}</title>
-    </Head>
+      <Head>
+        <title>Hexagono | {selecionada.nome}</title>
+      </Head>
       <Header />
       <div className={styles.containerTotal}>
         <Link href="/provas">
@@ -24,7 +52,7 @@ const index = () => {
           <div className={styles.mainContainer}>
             <section className={styles.faculdade}>
               <div>
-                  <img src="/icons/hexagonoPurple.svg" alt=""/>
+                <img src="/icons/hexagonoPurpleFill.svg" alt="" />
                 <span>{selecionada.nome}</span>
                 <p>Selecione a edição</p>
               </div>
@@ -32,7 +60,9 @@ const index = () => {
             </section>
             <section className={styles.anos}>
               {selecionada.anos.map((ano) => (
-                <Link href={`/provas/${selecionada.id}/${ano}`}><div>{ano}</div></Link>
+                <Link href={`/${selecionada.id}${ano}`} key={ano}>
+                  <div>{ano}</div>
+                </Link>
               ))}
             </section>
           </div>

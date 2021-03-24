@@ -20,12 +20,29 @@
     font-weight: 400;
 }
 .navContainer>div{
-    font-weight: 500;
+    font-weight: 300;
     font-size: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.navContainer>div>a{
+.navContainer>div>a,.navContainer>div>span{
     margin: 0 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 450px){
+    .navContainer>a>h2{
+        font-size: 2rem;
+    }
+    .logo img{
+        width: 2rem;
+        margin-right: .8rem;
+   }
+   
+}
+@media (max-width: 400px){
+    .navContainer>div{
+        font-size: 1.2rem;
+    }
 }

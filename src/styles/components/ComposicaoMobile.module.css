@@ -1,0 +1,42 @@
+.titleDiv {
+    margin-bottom: 1.5rem;
+  }
+  .titleDiv > img {
+    width: 3rem;
+    transform: translateY(+25%);
+    margin-right: 1rem;
+  }
+  .titleDiv > span {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .titleDiv > p {
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: #bbbbbb;
+    margin-top: 1rem;
+  }
+
+  .lista{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 0 auto 3rem;
+    align-items: center;
+    justify-items: flex-start;
+  }
+  .lista > li >img{
+    width: 1.5rem;
+  transform: translateY(+25%);
+  margin-right: 1rem;
+  }
+  .lista>li>strong{
+    color: #905CFF;
+  }
+
+   @media (max-width: 330px){
+    .lista {
+      font-size: .85rem;
+    }
+  } 
