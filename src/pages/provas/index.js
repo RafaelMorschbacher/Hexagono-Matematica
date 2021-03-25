@@ -13,7 +13,6 @@ export const getStaticProps = async () => {
     .collection("provas")
     .get();
   const lista = response.docs.map((item) => item.data());
-
   return {
     props: { universidades: lista },
   };

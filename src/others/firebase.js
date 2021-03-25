@@ -3,12 +3,13 @@ import 'firebase/firestore'
 import 'firebase/auth'
 
 var firebaseConfig = {
-    apiKey: "AIzaSyBGiN7CRBIwv5pfbgl9q4jopeOd50576IA",
-    authDomain: "hexagono-559d1.firebaseapp.com",
-    projectId: "hexagono-559d1",
-    storageBucket: "hexagono-559d1.appspot.com",
-    messagingSenderId: "859407763947",
-    appId: "1:859407763947:web:a176ed480653a5f40ff1ae"}
+  apiKey: process.env.NEXT_PUBLIC_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_APP_ID
+}
 
   if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
