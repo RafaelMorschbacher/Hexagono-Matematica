@@ -3,7 +3,6 @@ import React from 'react'
 import Header from '../components/Header'
 import { UserContext } from '../contexts/userContext';
 import styles from '../styles/login.module.css'
-import {useRouter} from 'next/router'
 import Head from 'next/head'
 
 const index = () => {
@@ -11,7 +10,7 @@ const index = () => {
 
   const [email, setEmail] = React.useState("");
   const [senha, setSenha] = React.useState("");
-  const router = useRouter()
+  
 
   React.useEffect(()=>setErro(null),[]) // Resetando erro, para não levar de uma page para outra
 
