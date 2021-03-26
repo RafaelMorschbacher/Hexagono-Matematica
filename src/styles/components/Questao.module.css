@@ -19,6 +19,7 @@
   font-weight: 500;
   background: url("/icons/hexagonoGray.svg") no-repeat center;
   background-size: contain;
+  margin-bottom: 1.5rem;
 }
 .questaoContainer > img {
   margin-bottom: 1.5rem;

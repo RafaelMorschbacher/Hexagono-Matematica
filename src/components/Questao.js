@@ -7,7 +7,8 @@ const Questao = ({
   idEdicao,
   minhasRespostas,
   setMinhasRespostas,
-  ativo
+  ativo,
+  opcoes
 }) => {
   function marcarAlternativa({ target }) {
     setMinhasRespostas({ ...minhasRespostas, [num]: target.value });
@@ -19,7 +20,7 @@ const Questao = ({
       <header>{num}</header>
       <img src={`/provas/${idEdicao}/${num}.png`} />
       <div className={styles.alternativasContainer}>
-        {alternativas.map((alt) => {
+        {opcoes.map((alt) => {
           return (
             <label key={alt}>
               {alt}

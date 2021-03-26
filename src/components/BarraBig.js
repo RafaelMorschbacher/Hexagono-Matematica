@@ -5,14 +5,14 @@ import {UserContext} from '../contexts/userContext'
 const BarraBig = ({porcentagem}) => {
 
   const {userName} = React.useContext(UserContext)
-  // let color;
-  // if (porcentagem >= 70) {
-  //   color = "#00FF85";
-  // } else if (porcentagem >= 45) {
-  //   color = "#FFE600";
-  // } else {
-  //   color = "#FF505A";
-  // }
+  let color;
+  if (porcentagem >= 70) {
+    color = "#00FF85";
+  } else if (porcentagem >= 45) {
+    color = "#FFE600";
+  } else {
+    color = "#FF505A";
+  }
   let texto
   if(porcentagem==100){
     texto = `Você gabaritou a prova, ${userName}, parabéns! Agora é apenas manter o nível e revisar.`
@@ -34,7 +34,7 @@ const BarraBig = ({porcentagem}) => {
         <div className={styles.barraTotal}>
           <div
             className={styles.barraProgresso}
-            style={{ width: `${porcentagem}%`}}
+            style={{ width: `${porcentagem}%`, background: color}}
           />
           <span style={{ left: `${porcentagem}%` }}>{porcentagem}%</span>
         </div>

@@ -49,6 +49,7 @@ export const getStaticProps = async ({ params }) => {
 
     const idProva = dadosResp.data().idProva
     const idEdicao = params.edicao
+    const opcoes = dadosResp.data().alternativas
 
     
     const dadosResp2 = await firebase.firestore().collection('info').doc('disponiveis').collection('provas').doc(idProva).get()
@@ -57,11 +58,11 @@ export const getStaticProps = async ({ params }) => {
     
 
     return {
-        props: { selecionada:dados,questoes,idEdicao }
+        props: { selecionada:dados,questoes,idEdicao, opcoes }
     }
 };
 
-const edicao = ({selecionada,questoes,idEdicao}) => {
+const edicao = ({selecionada,questoes,idEdicao,opcoes}) => {
 
     const [minhasRespostas, setMinhasRespostas] = React.useState(
         questoes.reduce((acc, prox) => {
@@ -143,6 +144,7 @@ const edicao = ({selecionada,questoes,idEdicao}) => {
                     <Questao
                     key={questao.num}
                       {...questao}
+                      opcoes = {opcoes}
                       minhasRespostas={minhasRespostas}
                       setMinhasRespostas={setMinhasRespostas}
                       ativo={index === slide}
